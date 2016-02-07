@@ -1,3 +1,4 @@
+package src;
 
 /**
  * This class is the superclass of the classes for machine instructions

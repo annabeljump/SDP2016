@@ -1,3 +1,5 @@
+package src;
+
 /**
  * This class is (as of this commit) copied straight from
  * Keith's repo - awaiting edit for coursework by Annabel Jump

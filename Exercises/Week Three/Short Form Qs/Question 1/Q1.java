@@ -4,6 +4,7 @@
  * Provide examples to illustrate answer.
  *
  * Answer below:
+ * @author Annabel Jump
  */
 
 /**

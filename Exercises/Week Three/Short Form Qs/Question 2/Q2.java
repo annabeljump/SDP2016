@@ -17,9 +17,12 @@
 /**
  * b) False - implementing class need only declare the methods of the interface
  * See InterfaceExample2 and InterfaceExample2Impl - the Impl does not declare the fields, but will compile.
+ * The fields declared in the Interface are static and final, therefore are technically constants,
+ * not instance fields.
  */
 
 /**
  * c) False - see InterfaceExample3 and InterfaceExample3Impl
- * Interfaces do not accept constructors. Trying to put constructors breaks the whole thing.
+ * Interfaces do not accept constructors. Trying to put constructors breaks the whole thing,
+ * including the implementation.
  */

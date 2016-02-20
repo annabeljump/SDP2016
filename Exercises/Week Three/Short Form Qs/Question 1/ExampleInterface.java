@@ -9,4 +9,9 @@ public interface ExampleInterface {
     //Fields have to be public (the below will not compile)
     private String ohDear;
 
+    //This, however, is fine
+    int x = 1;
+
+    void doThings();
+
 }

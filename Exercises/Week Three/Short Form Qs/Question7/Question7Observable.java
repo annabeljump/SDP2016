@@ -24,7 +24,7 @@ public class Question7Observable extends Observable {
     }
 
     //Method to return the (changed) value
-    public double getOrwell(){
+    public double getValue(){
         return orwell;
     }
 }

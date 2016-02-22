@@ -17,6 +17,8 @@ import java.util.Observer;
  */
 
 //Example below - Observable class is Question8Observable
+    //In this case, cctv would be equivalent to the Controller,
+    //and burglar the model.
 public class Question8 implements Observer{
 
     private Question8Observable robber = new Question8Observable("You got me!");

@@ -11,7 +11,7 @@ public class Question7Observable extends Observable {
     private Double orwell = 19.84;
 
     //Initialise the value
-    public void ObservableValue(Double o){
+    public void Question7Observable(Double o){
         this.orwell = o;
     }
 

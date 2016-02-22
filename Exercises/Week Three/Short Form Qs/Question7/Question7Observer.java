@@ -1,6 +1,5 @@
 package Question7;
 
-import javafx.beans.value.ObservableValue;
 import java.util.Observable;
 import java.util.Observer;
 
@@ -11,10 +10,10 @@ import java.util.Observer;
 public class Question7Observer implements Observer{
 
     //Initialise value that is being observed
-    private ObservableValue george = null;
+    private Question7Observable george = null;
 
     //Constructor for Question7Observer
-    public Question7Observer(ObservableValue b){
+    public Question7Observer(Question7Observable b){
         this.george = b;
     }
 

@@ -10,6 +10,8 @@
  * @author Annabel Jump
  */
 
-// To follow
+// This must be a Decorator design pattern.
+
 public class Question11 {
+
 }

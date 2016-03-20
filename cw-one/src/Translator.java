@@ -6,9 +6,10 @@ import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-/*
+/**
  * The translator of a <b>S</b><b>M</b>al<b>L</b> program.
- * At this first commit, unedited from Keith's repo.
+ * Modified by
+ * @author Annabel Jump
  */
 public class Translator {
 

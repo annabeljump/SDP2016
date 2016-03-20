@@ -26,6 +26,11 @@ public class BnzInstruction extends Instruction {
             //labels are given indexes
             //PC decides which next instruction to execute...
 
+            //get index number of new instruction reference
+            int newPC = m.getLabels().indexOf(nextInst);
+
+            //then set that as the new index of the instruction to be executed (in PC).
+            m.setPc(newPC);
         }
     }
 

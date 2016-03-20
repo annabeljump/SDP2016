@@ -21,7 +21,9 @@ public class BnzInstruction extends Instruction {
 
     @Override
     public void execute(Machine m) {
-        //TODO
+        if (m.getRegisters().getRegister(register) != 0){
+            //make the instruction with label == nextInst execute next
+        }
     }
 
     @Override

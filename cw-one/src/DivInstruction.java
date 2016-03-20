@@ -25,6 +25,8 @@ public class DivInstruction extends Instruction {
     public void execute(Machine m) {
         int value1 = m.getRegisters().getRegister(op1);
         int value2 = m.getRegisters().getRegister(op2);
+        //this will cause data loss for Ints - any decimal places will be lost (eg 3/2 = 1.5 will just be 1)
+        //TODO think about division without loss of accuracy
         m.getRegisters().setRegister(result, value1 / value2);
     }
 

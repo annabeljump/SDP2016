@@ -18,5 +18,5 @@ public class testAddInstruction {
         AddInstruction testee = new AddInstruction("L1", 0, 3, 4);
 
     }
-
+//TODO all of this - how to set up registers & check entries are correct, etc.
 }

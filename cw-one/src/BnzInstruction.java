@@ -23,6 +23,9 @@ public class BnzInstruction extends Instruction {
     public void execute(Machine m) {
         if (m.getRegisters().getRegister(register) != 0){
             //make the instruction with label == nextInst execute next
+            //labels are given indexes
+            //PC decides which next instruction to execute...
+
         }
     }
 

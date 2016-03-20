@@ -21,7 +21,7 @@ public class BnzInstruction extends Instruction {
 
     @Override
     public void execute(Machine m) {
-
+        //TODO
     }
 
     @Override

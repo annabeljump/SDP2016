@@ -1,7 +1,8 @@
 package src;
 
 /**
- * Created by annabel on 20/03/16.
+ * Bnz instruction to change the order of lines executed
+ * @author Annabel Jump
  */
 public class BnzInstruction extends Instruction {
     private int register;

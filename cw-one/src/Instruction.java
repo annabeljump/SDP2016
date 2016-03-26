@@ -9,6 +9,10 @@ package src;
 public abstract class Instruction {
     protected String label;
     protected String opcode;
+    protected int operator1;
+    protected int operator2;
+    protected int register;
+
 
     // Constructor: an instruction with label l and opcode op
     // (op must be an operation of the language)

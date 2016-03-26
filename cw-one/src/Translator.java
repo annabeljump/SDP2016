@@ -2,6 +2,7 @@ package src;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Constructor;
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
@@ -79,6 +80,14 @@ public class Translator {
         int s2;
         int r;
         String x;
+
+        Class superInstruction = Instruction.class;
+        try {
+            Constructor instructionConstructor = superInstruction.getConstructor(new Class[] {Instruction.class});
+        } catch (NoSuchMethodException e) {
+            e.printStackTrace();
+        }
+
 
         if (line.equals(""))
             return null;

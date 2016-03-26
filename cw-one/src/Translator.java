@@ -83,7 +83,9 @@ public class Translator {
 
         Class superInstruction = Instruction.class;
         try {
-            Constructor instructionConstructor = superInstruction.getConstructor(new Class[] {Instruction.class});
+            Constructor instructionConstructor = superInstruction.getConstructor(String.class, String.class);
+            Constructor[] manyConstructors = superInstruction.getConstructors();
+
         } catch (NoSuchMethodException e) {
             e.printStackTrace();
         }

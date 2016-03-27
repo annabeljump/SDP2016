@@ -82,16 +82,6 @@ public class Translator {
         int r;
         String x;
 
-        //Class superInstruction = Instruction.class;
-        //try {
-          //  Constructor instructionConstructor = superInstruction.getConstructor(String.class, String.class);
-          //  Constructor[] manyConstructors = superInstruction.getConstructors();
-
-        //} catch (NoSuchMethodException e) {
-        //    e.printStackTrace();
-        //}
-
-
         if (line.equals(""))
             return null;
 
@@ -110,40 +100,46 @@ public class Translator {
         //Now get the class with the name in the operation string
         try {
             Class currentInstruction = Class.forName(operation);
-            //Object reflectedClass = currentInstruction.newInstance();
+            Instruction reflectedClass = null;
 
             //get the constructor for the new class - there is more than 1!
             Constructor[] constructorParameters = currentInstruction.getConstructors();
 
-            //Now scan the parameter types for the constructor and then substantiate the class
-            //TODO this is not very neat - what about String, String constructor from superclass
-            for(Constructor reqparam : constructorParameters){
-                Class[] constructors = reqparam.getParameterTypes();
-                if (constructors.length == 1){
-                    r = scanInt();
-                    Object reflectedClass = currentInstruction.getConstructor(String.class, int.class)
-                            .newInstance(ins, r);
-                } else if (constructors.length == 2 && constructors[1] == int.class){
-                    r = scanInt();
-                    s1 = scanInt();
-                    Object reflectedClass = currentInstruction.getConstructor(String.class, int.class, int.class)
-                            .newInstance(ins, r, s1);
-                } else if (constructors.length == 2 && constructors[1] == String.class){
-                    r = scanInt();
-                    x = scan();
-                    Object reflectedClass = currentInstruction.getConstructor(String.class, int.class, String.class)
-                            .newInstance(ins, r, x);
-                } else if (constructors.length == 3) {
-                    r = scanInt();
-                    s1 = scanInt();
-                    s2 = scanInt();
-                    Object reflectedClass = currentInstruction.getConstructor(String.class, int.class, int.class, int.class)
-                            .newInstance(ins, r, s1, s2);
-                } else {
-                    System.out.println("Uh-oh, invalid operation requested!");
-                }
-            }
 
+            //there should be 2 constructors for each function - 1st is just label, op
+            //second should be constructor for specific function
+            //this is a bit messy - what if later functions have more than 1 constructor??
+            //take the second constructor, and use to instantiate class
+
+            Class[] actualConstructor = constructorParameters[1].getParameterTypes();
+
+            if (actualConstructor.length == 1){
+                r = scanInt();
+                reflectedClass = (Instruction)currentInstruction.getConstructor(String.class, int.class)
+                        .newInstance(ins, r);
+                return reflectedClass;
+            } else if (actualConstructor.length == 2 && actualConstructor[1] == int.class){
+                r = scanInt();
+                s1 = scanInt();
+                reflectedClass = (Instruction)currentInstruction.getConstructor(String.class, int.class, int.class)
+                        .newInstance(ins, r, s1);
+                return reflectedClass;
+            } else if (actualConstructor.length == 2 && actualConstructor[1] == String.class){
+                r = scanInt();
+                x = scan();
+                reflectedClass = (Instruction)currentInstruction.getConstructor(String.class, int.class, String.class)
+                        .newInstance(ins, r, x);
+                return reflectedClass;
+            } else if (actualConstructor.length == 3) {
+                r = scanInt();
+                s1 = scanInt();
+                s2 = scanInt();
+                reflectedClass = (Instruction)currentInstruction.getConstructor(String.class, int.class, int.class, int.class)
+                        .newInstance(ins, r, s1, s2);
+                return reflectedClass;
+            } else {
+                System.out.println("Uh-oh, invalid operation requested!");
+            }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (NoSuchMethodException e) {

@@ -94,7 +94,7 @@ public class Translator {
         //Now prefix the operation to "Instruction"
         //Now this will be the name of the subclass of Instruction (eg AddInstruction)
         //***** any subsequent additions to subclasses will need to adhere to naming convention!!*****
-        operation = operation + "Instruction";
+        operation = "src." + operation + "Instruction";
 
 
         //Now get the class with the name in the operation string

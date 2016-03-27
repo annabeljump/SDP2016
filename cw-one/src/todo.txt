@@ -1,3 +1,0 @@
-1. ENUM or similar to determine case ... ???
-2. transform label to uppercase 1st letter DONE
-3. then can call subclasses of instruction using same + reflective methods.

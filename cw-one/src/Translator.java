@@ -116,26 +116,26 @@ public class Translator {
             if (actualConstructor.length == 1){
                 r = scanInt();
                 reflectedClass = (Instruction)currentInstruction.getConstructor(String.class, int.class)
-                        .newInstance(ins, r);
+                        .newInstance(label, r);
                 return reflectedClass;
             } else if (actualConstructor.length == 2 && actualConstructor[1] == int.class){
                 r = scanInt();
                 s1 = scanInt();
                 reflectedClass = (Instruction)currentInstruction.getConstructor(String.class, int.class, int.class)
-                        .newInstance(ins, r, s1);
+                        .newInstance(label, r, s1);
                 return reflectedClass;
             } else if (actualConstructor.length == 2 && actualConstructor[1] == String.class){
                 r = scanInt();
                 x = scan();
                 reflectedClass = (Instruction)currentInstruction.getConstructor(String.class, int.class, String.class)
-                        .newInstance(ins, r, x);
+                        .newInstance(label, r, x);
                 return reflectedClass;
             } else if (actualConstructor.length == 3) {
                 r = scanInt();
                 s1 = scanInt();
                 s2 = scanInt();
                 reflectedClass = (Instruction)currentInstruction.getConstructor(String.class, int.class, int.class, int.class)
-                        .newInstance(ins, r, s1, s2);
+                        .newInstance(label, r, s1, s2);
                 return reflectedClass;
             } else {
                 System.out.println("Uh-oh, invalid operation requested!");

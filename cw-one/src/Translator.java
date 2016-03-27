@@ -3,6 +3,7 @@ package src;
 import java.io.File;
 import java.io.IOException;
 import java.lang.reflect.Constructor;
+import java.lang.reflect.InvocationTargetException;
 import java.util.ArrayList;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
@@ -109,55 +110,67 @@ public class Translator {
         //Now get the class with the name in the operation string
         try {
             Class currentInstruction = Class.forName(operation);
-            //still need to work out how to pass different parameters to different classes...
-            r = scanInt();
-            s1 = scanInt();
-            s2 = scanInt();
-            x = scan();
-            Object reflectedClass = currentInstruction.newInstance();
+            //Object reflectedClass = currentInstruction.newInstance();
+
+            //get the constructor for the new class - there is more than 1!
+            Constructor[] constructorParameters = currentInstruction.getConstructors();
+
+            //Now scan the parameter types for the constructor and then substantiate the class
+            for(Constructor reqparam : constructorParameters){
+                Class[] constructors = reqparam.getParameterTypes();
+                if (constructors.length == 1){
+                    r = scanInt();
+                    Object reflectedClass = currentInstruction.getConstructor(String.class, int.class).newInstance(ins, r);
+                }
+            }
+
         } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (NoSuchMethodException e) {
             e.printStackTrace();
         } catch (InstantiationException e) {
             e.printStackTrace();
         } catch (IllegalAccessException e) {
             e.printStackTrace();
+        } catch (InvocationTargetException e) {
+            e.printStackTrace();
         }
 
 
-        switch (ins) {
-            case "add":
-                r = scanInt();
-                s1 = scanInt();
-                s2 = scanInt();
-                return new AddInstruction(label, r, s1, s2);
-            case "lin":
-                r = scanInt();
-                s1 = scanInt();
-                return new LinInstruction(label, r, s1);
-            case "sub":
-                r = scanInt();
-                s1 = scanInt();
-                s2 = scanInt();
-                return new SubInstruction(label, r, s1, s2);
-            case "mul":
-                r = scanInt();
-                s1 = scanInt();
-                s2 = scanInt();
-                return new MulInstruction(label, r, s1, s2);
-            case "div":
-                r = scanInt();
-                s1 = scanInt();
-                s2 = scanInt();
-                return new DivInstruction(label, r, s1, s2);
-            case "out":
-                r = scanInt();
-                return new OutInstruction(label, r);
-            case "bnz":
-                r = scanInt();
-                x = scan();
-                return new BnzInstruction(label, r, x);
+        //switch (ins) {
+          //  case "add":
+          //      r = scanInt();
+          //      s1 = scanInt();
+          //      s2 = scanInt();
+          //      return new AddInstruction(label, r, s1, s2);
+          //  case "lin":
+          //      r = scanInt();
+          //      s1 = scanInt();
+          //      return new LinInstruction(label, r, s1);
+          //  case "sub":
+          //      r = scanInt();
+          //      s1 = scanInt();
+          //      s2 = scanInt();
+          //      return new SubInstruction(label, r, s1, s2);
+          //  case "mul":
+          //      r = scanInt();
+          //      s1 = scanInt();
+          //      s2 = scanInt();
+          //      return new MulInstruction(label, r, s1, s2);
+          //  case "div":
+          //      r = scanInt();
+          //      s1 = scanInt();
+          //      s2 = scanInt();
+          //      return new DivInstruction(label, r, s1, s2);
+          //  case "out":
+          //      r = scanInt();
+          //      return new OutInstruction(label, r);
+          //  case "bnz":
+          //      r = scanInt();
+          //      x = scan();
+          //      return new BnzInstruction(label, r, x);
 
-        }
+        //}
 
         // You will have to write code here for the other instructions.
 

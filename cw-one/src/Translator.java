@@ -113,24 +113,24 @@ public class Translator {
 
             Class[] actualConstructor = constructorParameters[1].getParameterTypes();
 
-            if (actualConstructor.length == 1){
+            if (actualConstructor.length == 2){
                 r = scanInt();
                 reflectedClass = (Instruction)currentInstruction.getConstructor(String.class, int.class)
                         .newInstance(label, r);
                 return reflectedClass;
-            } else if (actualConstructor.length == 2 && actualConstructor[1] == int.class){
+            } else if (actualConstructor.length == 3 && actualConstructor[2] == int.class){
                 r = scanInt();
                 s1 = scanInt();
                 reflectedClass = (Instruction)currentInstruction.getConstructor(String.class, int.class, int.class)
                         .newInstance(label, r, s1);
                 return reflectedClass;
-            } else if (actualConstructor.length == 2 && actualConstructor[1] == String.class){
+            } else if (actualConstructor.length == 3 && actualConstructor[2] == String.class){
                 r = scanInt();
                 x = scan();
                 reflectedClass = (Instruction)currentInstruction.getConstructor(String.class, int.class, String.class)
                         .newInstance(label, r, x);
                 return reflectedClass;
-            } else if (actualConstructor.length == 3) {
+            } else if (actualConstructor.length == 4) {
                 r = scanInt();
                 s1 = scanInt();
                 s2 = scanInt();

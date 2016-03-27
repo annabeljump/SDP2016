@@ -95,6 +95,23 @@ public class Translator {
             return null;
 
         String ins = scan();
+
+        //Now turn first scanned word "add", "lin" etc into "Add", "Lin", etc
+        String firstLetter = ins.substring(0, 1).toUpperCase();
+        String operation = firstLetter + ins.substring(1);
+
+        //Now prefix the operation to "Instruction"
+        //Now this will be the name of the subclass of Instruction (eg AddInstruction)
+        //***** any subsequent additions to subclasses will need to adhere to naming convention!!*****
+        operation = operation + "Instruction";
+
+        try {
+            Class currentInstruction = Class.forName(operation);
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+
+
         switch (ins) {
             case "add":
                 r = scanInt();

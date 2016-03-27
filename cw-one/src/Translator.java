@@ -81,14 +81,14 @@ public class Translator {
         int r;
         String x;
 
-        Class superInstruction = Instruction.class;
-        try {
-            Constructor instructionConstructor = superInstruction.getConstructor(String.class, String.class);
-            Constructor[] manyConstructors = superInstruction.getConstructors();
+        //Class superInstruction = Instruction.class;
+        //try {
+          //  Constructor instructionConstructor = superInstruction.getConstructor(String.class, String.class);
+          //  Constructor[] manyConstructors = superInstruction.getConstructors();
 
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        }
+        //} catch (NoSuchMethodException e) {
+        //    e.printStackTrace();
+        //}
 
 
         if (line.equals(""))
@@ -105,9 +105,21 @@ public class Translator {
         //***** any subsequent additions to subclasses will need to adhere to naming convention!!*****
         operation = operation + "Instruction";
 
+
+        //Now get the class with the name in the operation string
         try {
             Class currentInstruction = Class.forName(operation);
+            //still need to work out how to pass different parameters to different classes...
+            r = scanInt();
+            s1 = scanInt();
+            s2 = scanInt();
+            x = scan();
+            Object reflectedClass = currentInstruction.newInstance();
         } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
             e.printStackTrace();
         }
 

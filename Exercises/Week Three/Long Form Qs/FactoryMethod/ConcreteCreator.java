@@ -4,6 +4,9 @@
  *
  * @author Annabel Jump
  */
-public class ConcreteCreator {
-    //Will follow
+public class ConcreteCreator implements Creator {
+
+    public Product getProduct(){
+        return Creator.getProduct();
+    }
 }

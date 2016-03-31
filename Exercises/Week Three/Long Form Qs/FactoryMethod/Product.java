@@ -5,5 +5,7 @@
  * @author Annabel Jump
  */
 public interface Product {
+
     public void stuff();
+
 }

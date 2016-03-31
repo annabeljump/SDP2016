@@ -1,0 +1,14 @@
+Answers to portions of Singleton question that are not coding questions!
+
+Please see question 6 and 5 of the short form section for the implementations of lazy and eager singleton patterns.
+
+(a) As in question 6, the use of synchronized in the getInstance() method for the singleton ensures that only
+one instance of the object is initialised even if more than one thread will request an instance - only one thread
+can be present in the method at one time, synchronized in effect creates a lock on the method.
+
+(b) Synchronized decreases the performance of the code because of the extra steps involved in checking, getting,
+and releasing locks on the method together with the fact that only one thread can be working on the method at
+one time, meaning it is no longer concurrent.
+
+(c) ?
+

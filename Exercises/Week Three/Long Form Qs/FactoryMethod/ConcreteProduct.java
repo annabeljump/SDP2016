@@ -6,5 +6,9 @@
  */
 
 public class ConcreteProduct implements Product {
-    //Will Follow
+
+    @Override
+    public void stuff() {
+        System.out.println("Stuff the Magic Dragon is a Basketball Team's Mascot");
+    }
 }

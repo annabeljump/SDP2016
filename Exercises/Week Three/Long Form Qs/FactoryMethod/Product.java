@@ -5,5 +5,5 @@
  * @author Annabel Jump
  */
 public interface Product {
-    //Will Follow
+    public void stuff();
 }

@@ -7,6 +7,9 @@ import java.io.Serializable;
  * @author Annabel Jump
  */
 
+//simple way for Cloneable not to break the Singleton = don't implement Cloneable
+    //singletons and cloneable objects are pretty much exact opposites
+    //but if you really wanted to implement Cloneable, could override clone() to throw an exception
 public class SingletonProtected implements Serializable {
 
     private static final long serialVersionID = 68L;

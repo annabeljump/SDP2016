@@ -19,10 +19,22 @@ import java.io.Serializable;
  * }
  */
 
+
 //simple way for Cloneable not to break the Singleton = don't implement Cloneable
     //singletons and cloneable objects are pretty much exact opposites
     //but if you really wanted to implement Cloneable, could override clone() to throw an exception
 public class SingletonProtected implements Serializable {
+
+    //to avoid multiple class loaders, specify class loader to be used
+        //NB: This code is from StackOverflow and originally from JavaWorld blog!
+        //can't see how else to do it, so here's the link in the next line, all credit to them:
+        //@author http://www.javaworld.com/article/2073352/core-java/simply-singleton.html?page=2
+    private static Class getClass(String classname) throws ClassNotFoundException {
+        ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
+        if(classLoader == null)
+            classLoader = SingletonProtected.class.getClassLoader();
+        return (classLoader.loadClass(classname));
+    }
 
     private static final long serialVersionID = 68L;
 

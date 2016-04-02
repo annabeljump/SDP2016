@@ -22,7 +22,7 @@ public class CommentaryObject implements Subject, Commentary {
     @Override
     public void unSubscribeObserver(Observer observer) {
         for (Observer watcher : subList) {
-            if (observer.equals(watcher)) {
+            if (watcher.equals(observer)) {
                 subList.remove(observer);
                 break;
             }

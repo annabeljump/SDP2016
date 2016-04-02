@@ -21,9 +21,12 @@ public class CommentaryObject implements Subject, Commentary {
 
     @Override
     public void unSubscribeObserver(Observer observer) {
-
-        //need to test to see if removes the correct observer - may need to use .equals
-        subList.remove(observer);
+        for (Observer watcher : subList) {
+            if (observer.equals(watcher)) {
+                subList.remove(observer);
+                break;
+            }
+        }
     }
 
     @Override
@@ -34,7 +37,6 @@ public class CommentaryObject implements Subject, Commentary {
 
     }
 
-    //not entirely sure what this method is at this point. This is a guess.
     @Override
     public String subjectDetails() {
         return matchDetails;

@@ -11,4 +11,8 @@ public interface Observer {
 
     void unSubscribe();
 
+    Boolean equals(Observer o);
+
+    String getName();
+
 }

@@ -21,12 +21,8 @@ public class CommentaryObject implements Subject, Commentary {
 
     @Override
     public void unSubscribeObserver(Observer observer) {
-        for (Observer watcher : subList) {
-            if (watcher.equals(observer)) {
-                subList.remove(observer);
-                break;
-            }
-        }
+        int arrayIndex = subList.indexOf(observer);
+        subList.remove(arrayIndex);
     }
 
     @Override

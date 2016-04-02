@@ -1,5 +1,6 @@
 /**
  * Created to instantiate PayD for the purpose of the adapter.
+ * This is actually totally useless but I am leaving it on the repo
  * @author Annabel Jump
  */
 

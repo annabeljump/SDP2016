@@ -4,6 +4,7 @@
  */
 public abstract class PizzaDecorator implements Pizza {
 
+    String topping;
     protected Pizza pizzaWithToppings;
 
     //Not really sure these methods are correct
@@ -13,7 +14,8 @@ public abstract class PizzaDecorator implements Pizza {
     }
 
     public String getDesc(){
-        return pizzaWithToppings.getDesc();
+        String topped = pizzaWithToppings.getDesc() + topping;
+        return topped;
     }
 
     public double getPrice(){

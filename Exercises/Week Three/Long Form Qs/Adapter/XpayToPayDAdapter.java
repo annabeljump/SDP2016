@@ -9,7 +9,6 @@ public class XpayToPayDAdapter implements PayD {
     //Xpay fields remaining to convert/set:
     //private String cardExpMonth;
     //private String cardExpYear;
-    //private Short cardCVVNo;
 
 
     private String custCardNo;
@@ -22,6 +21,7 @@ public class XpayToPayDAdapter implements PayD {
         fromThis.setAmount(this.totalAmount);
         fromThis.setCreditCardNo(this.custCardNo);
         fromThis.setCustomerName(this.cardOwnerName);
+        fromThis.setCardCVVNo(this.cVVNo.shortValue());
         return fromThis;
     }
 

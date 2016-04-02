@@ -26,6 +26,7 @@ public class SMSUsers implements Observer {
         match.unSubscribeObserver(this);
     }
 
+    //These are now unnecessary but I am going to leave them here
     @Override
     public Boolean equals(Observer o){
         if(o.getName() == this.name){

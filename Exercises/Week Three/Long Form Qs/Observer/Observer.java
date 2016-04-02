@@ -11,6 +11,7 @@ public interface Observer {
 
     void unSubscribe();
 
+    //these are now unnecessary but will leave them
     Boolean equals(Observer o);
 
     String getName();

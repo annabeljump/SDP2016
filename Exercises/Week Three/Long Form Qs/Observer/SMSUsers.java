@@ -18,14 +18,12 @@ public class SMSUsers implements Observer {
 
     @Override
     public void subscribe() {
-        Observer user = new SMSUsers(this.match, this.name);
-        match.subscribeObserver(user);
+        match.subscribeObserver(this);
     }
 
     @Override
     public void unSubscribe() {
-        Observer user = new SMSUsers(this.match, this.name);
-        match.unSubscribeObserver(user);
+        match.unSubscribeObserver(this);
     }
 
     @Override

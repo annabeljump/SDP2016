@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class TestObserver {
     public static void main(String[] args) {
 
-        Subject subject = new CommentaryObject(new ArrayList<Observer>(), "Soccer Match [2014AUG24]");
+        Subject subject = new CommentaryObject(new ArrayList<>(), "Soccer Match [2014AUG24]");
 
         Observer observer = new SMSUsers(subject, "Adam Warner [New York]");
         observer.subscribe();

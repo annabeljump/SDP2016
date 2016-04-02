@@ -6,11 +6,6 @@ public class XpayToPayDAdapter implements PayD {
 
     private Xpay fromThis = new XpayImpl();
 
-    //Xpay fields remaining to convert/set:
-    //private String cardExpMonth;
-    //private String cardExpYear;
-
-
     private String custCardNo;
     private String cardOwnerName;
     private String cardExpMonthDate;
@@ -22,6 +17,12 @@ public class XpayToPayDAdapter implements PayD {
         fromThis.setCreditCardNo(this.custCardNo);
         fromThis.setCustomerName(this.cardOwnerName);
         fromThis.setCardCVVNo(this.cVVNo.shortValue());
+        //this assumes credit card expiry dates will be "MM/YY" or "MM/YYY"
+        String[] expiryData = this.cardExpMonthDate.split("/");
+        String expMonth = expiryData[0];
+        String expYear = expiryData[1];
+        fromThis.setCardExpMonth(expMonth);
+        fromThis.setCardExpYear(expYear);
         return fromThis;
     }
 

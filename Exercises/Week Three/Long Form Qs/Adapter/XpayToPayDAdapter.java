@@ -6,11 +6,24 @@ public class XpayToPayDAdapter implements PayD {
 
     private Xpay fromThis = new XpayImpl();
 
+    //Xpay fields remaining to convert/set:
+    //private String cardExpMonth;
+    //private String cardExpYear;
+    //private Short cardCVVNo;
+
+
     private String custCardNo;
     private String cardOwnerName;
     private String cardExpMonthDate;
     private Integer cVVNo;
     private Double totalAmount;
+
+    public Xpay toThis(PayD allDetails){
+        fromThis.setAmount(this.totalAmount);
+        fromThis.setCreditCardNo(this.custCardNo);
+        fromThis.setCustomerName(this.cardOwnerName);
+        return fromThis;
+    }
 
     @Override
     public String getCustCardNo() {

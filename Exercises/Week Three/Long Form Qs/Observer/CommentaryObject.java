@@ -43,5 +43,6 @@ public class CommentaryObject implements Subject, Commentary {
     @Override
     public void setDesc(String desc) {
         this.playByPlay = desc;
+        notifyObservers();
     }
 }

@@ -4,7 +4,7 @@ import java.util.ArrayList;
  * Created for Observer pattern question
  * @author Annabel Jump
  */
-public class CommentaryObject implements Subject {
+public class CommentaryObject implements Subject, Commentary {
     private ArrayList<Observer> subList;
     private String matchDetails;
     private String playByPlay;
@@ -26,7 +26,6 @@ public class CommentaryObject implements Subject {
         subList.remove(observer);
     }
 
-    //need to update playByPlay or should this be matchDetails??
     @Override
     public void notifyObservers() {
         for(Observer observer : subList){
@@ -39,5 +38,10 @@ public class CommentaryObject implements Subject {
     @Override
     public String subjectDetails() {
         return matchDetails;
+    }
+
+    @Override
+    public void setDesc(String desc) {
+        this.playByPlay = desc;
     }
 }

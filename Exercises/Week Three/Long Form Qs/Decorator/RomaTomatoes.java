@@ -4,6 +4,8 @@
  */
 public class RomaTomatoes extends PizzaDecorator {
 
+    private double cost =  5.20;
+
     public RomaTomatoes(Pizza decoratedPizza) {
         super(decoratedPizza);
     }
@@ -11,11 +13,12 @@ public class RomaTomatoes extends PizzaDecorator {
     @Override
     public String getDesc(){
 
-        return pizzaWithToppings.getDesc();
+        return pizzaWithToppings.getDesc() + "Roma Tomatoes (" + cost + "), ";
     }
 
+    @Override
     public double getPrice(){
-        return pizzaWithToppings.getPrice();
+        return pizzaWithToppings.getPrice() + cost;
     }
 
 

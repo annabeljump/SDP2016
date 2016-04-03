@@ -6,12 +6,13 @@
 class Methods {
 
   //1.
-  def getSquare(i: Int){
-    return i * i
+  def getSquare(i: Int): Int ={
+    val x = i * i
+    x
   }
 
   val a = getSquare(3)
-  assert(a == 9)
+  assert(a.equals(9))
 
   val  b = getSquare(6)
   assert(b == 36)
@@ -33,12 +34,8 @@ class Methods {
 
   //3.
   def manyTimesString(str: String, i: Int): String = {
-    var a = str
-    while(i > 1){
-      a = a + str
-      i - 1
-    }
-    return a
+    if(i == 1) str
+    else str.concat(manyTimesString(str, i - 1))
   }
 
   val m1 = manyTimesString("abc", 3)

@@ -18,6 +18,11 @@ public class TestDecoratorPattern {
 
         Pizza pizza = new SimplyVegPizza();
 
+        /*
+         * Because "Print" is called after every ingredient, the output (apart from after the final ingredient)
+         * does not look like the one in the exercise sheet! Also the exercise sheet output has two "Cheese"
+         * where only one "cheese" has been added to the nonVegPizza.
+         */
         pizza = new RomaTomatoes(pizza);
         print(pizza);
 
@@ -38,6 +43,19 @@ public class TestDecoratorPattern {
 
         pizza = new Ham(pizza);
         print(pizza);
+
+        //Here are some extra tests to prove comment above:
+
+        Pizza myFavourite = new SimplyNonVegPizza();
+
+        myFavourite = new Cheese(myFavourite);
+        myFavourite = new Pepperoni(myFavourite);
+        myFavourite = new Pepperoni(myFavourite);
+        print(myFavourite); //Cheese and double pepperoni!
+
+        //One More, because now I am hungry:
+
+
     }
 
     private static void print(Pizza pizza) {

@@ -21,7 +21,7 @@ class expressions {
   if ((isSunny || isPartlyCloudy) && (temperature > 80 || temperature < 20)) true
   else false
 
-  //4.
+  //4. (the f in 5f/9 makes the number a float - so no integer maths!)
   var tempCelsius = (temperature - 32) * (5f/9)
 
   //5.

@@ -33,7 +33,7 @@ class AtomicTest[T](val target: T) {
     }
   }
 
-  def beginsWith(exp: String) = tst(exp) {
+  def beginsWith(exp: String)= tst(exp) {
     str.startsWith(
       exp.replaceAll("\r\n", "\n"))
   }
@@ -46,4 +46,3 @@ object AtomicTest {
   implicit def any2Atomic[T](target: T) =
     new AtomicTest(target)
 }
-

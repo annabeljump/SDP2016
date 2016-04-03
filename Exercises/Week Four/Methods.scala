@@ -30,4 +30,20 @@ class Methods {
 
   val t2 = isArg1GreaterThanArg2(2.1, 1.2)
   assert(t2)
+
+  //3.
+  def manyTimesString(str: String, i: Int): String = {
+    var a = str
+    while(i > 1){
+      a = a + str
+      i - 1
+    }
+    return a
+  }
+
+  val m1 = manyTimesString("abc", 3)
+  assert("abcabcabc" ==  m1, "My Message here??")
+
+  val m2 = manyTimesString("123", 2)
+  assert("123123" == m2, "Another of my Messages here")
 }

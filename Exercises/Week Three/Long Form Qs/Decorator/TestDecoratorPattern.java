@@ -54,7 +54,11 @@ public class TestDecoratorPattern {
         print(myFavourite); //Cheese and double pepperoni!
 
         //One More, because now I am hungry:
+        Pizza drSeuss = new SimplyNonVegPizza();
 
+        drSeuss = new GreenEggs(drSeuss);
+        drSeuss = new Ham(drSeuss);
+        print(drSeuss);
 
     }
 

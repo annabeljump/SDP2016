@@ -1,0 +1,17 @@
+Questions:
+(A) Briefly describe the Strategy Design Pattern
+(B) When is it appropriate to use the Strategy Design Pattern
+
+Answers:
+
+(A) The Strategy Design Pattern allows the behaviour of the program to be selected at runtime.
+It consists of a package of interchangeable classes (all using the same interface),
+together with a handling class from where the selection will be made at runtime.
+
+(B) It is appropriate to use the Strategy Pattern in instances where there are more than 1 user
+of a program, perhaps on different devices, where one implementation will not work and therefore
+another must be created, which will not work on any other type of device - eg an Apple mobile phone vs
+an Android one - a program could have elements that need different code for each device to achieve the
+same thing - and a sensor piece of code could notify the Strategy pattern piece of code what type of
+device is accessing it, and at runtime the strategy pattern code could then select the correct
+implementation.

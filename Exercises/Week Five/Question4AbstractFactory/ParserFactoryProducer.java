@@ -7,9 +7,9 @@ package Question4AbstractFactory;
 public class ParserFactoryProducer {
 
     public static AbstractParserFactory getFactory(String str){
-        if (str == "NYCFactory"){
+        if (str.equals("NYCFactory")){
             return new NYCXMLFactory();
-        } else if (str == "LondonFactory") {
+        } else if (str.equals("LondonFactory")) {
             return new LondonXMLFactory();
         } else
             System.out.println("Invalid Request");

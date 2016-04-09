@@ -7,6 +7,17 @@ package Question4AbstractFactory;
 public class NYCXMLFactory implements AbstractParserFactory {
     @Override
     public XMLParser getParserInstance(String parserType) {
-        return null;
+        if(parserType.equals("NYCERROR")) {
+            return new NYCErrorXMLParser();
+        } else if(parserType.equals("NYCFEEDBACK")){
+            return new NYCFeedbackXML();
+        } else if(parserType.equals("NYCORDER")){
+            return new NYCOrderXMLParser();
+        } else if(parserType.equals("NYCRESPONSE")){
+            return new NYCResponseXMLParser();
+        } else {
+            System.out.println("Invalid Request");
+            return null;
+        }
     }
 }

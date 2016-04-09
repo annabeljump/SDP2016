@@ -6,7 +6,8 @@ package Question4AbstractFactory;
  */
 public class ParserFactoryProducer {
 
-    public AbstractParserFactory getFactory(String str){
+    public static AbstractParserFactory getFactory(String str){
         //insert different types of factories here
+        return null;
     }
 }

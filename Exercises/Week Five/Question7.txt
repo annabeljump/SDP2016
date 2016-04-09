@@ -1,0 +1,13 @@
+Question:
+(a) What is the Facade Pattern?
+(b) When, and why, would you use the Facade Pattern?
+
+Answer:
+(a) The Facade pattern is where an object provides a simple interface to a class
+or library in order to make it easier to read and understand. There is usually
+a wrapper class which contains the objects that access the library of implementations.
+
+(b) The Facade pattern should be used where the class library is complex, as it can
+contain the most commonly used methods. It also reduces external dependencies on different
+classes, as most code would use the facade, and therefore making changes to the code
+is easier.

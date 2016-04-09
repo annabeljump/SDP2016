@@ -21,6 +21,6 @@ public abstract class Car {
     public abstract void produceProduct();
 
     public void printDetails() {
-        throw new UnsupportedOperationException();
+        System.out.println("Car: " + type + ", Product: " + p.productName());
     }
 }

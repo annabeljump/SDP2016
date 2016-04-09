@@ -7,17 +7,18 @@ package Question4AbstractFactory;
 public class LondonXMLFactory implements AbstractParserFactory {
     @Override
     public XMLParser getParserInstance(String parserType) {
-        if(parserType.equals("LondonERROR")) {
-            return new LondonErrorXMLParser();
-        } else if(parserType.equals("LondonFEEDBACK")){
-            return new LondonFeedbackXML();
-        } else if(parserType.equals("LondonORDER")){
-            return new LondonOrderXMLParser();
-        } else if(parserType.equals("LondonRESPONSE")){
-            return new LondonResponseXMLParser();
-        } else {
-            System.out.println("Invalid Request");
-            return null;
+        switch (parserType) {
+            case "LondonERROR":
+                return new LondonErrorXMLParser();
+            case "LondonFEEDBACK":
+                return new LondonFeedbackXML();
+            case "LondonORDER":
+                return new LondonOrderXMLParser();
+            case "LondonRESPONSE":
+                return new LondonResponseXMLParser();
+            default:
+                System.out.println("Invalid Request");
+                return null;
         }
     }
 }

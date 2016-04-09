@@ -5,5 +5,5 @@ package Question2Strategy;
  * @author not annabel
  */
 public interface TextFormatter {
-    void format(String text);
+    String format(String text);
 }

@@ -11,6 +11,6 @@ public class TestStrategyPattern {
         editor.publishText("Testing text in caps formatter");
         formatter = new LowerTextFormatter();
         editor = new TextEditor(formatter);
-        editor.publishText("Testing text in lower formatter");
+        editor.publishText("TESTING TEXT IN LOWER FORMATTER");
     }
 }

@@ -6,7 +6,7 @@ package Question2Strategy;
  */
 public class CapTextFormatter implements TextFormatter {
     @Override
-    public void format(String text) {
-        //do stuff
+    public String format(String text) {
+        return "[CapTextFormatter]: " + text.toUpperCase();
     }
 }

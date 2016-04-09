@@ -6,7 +6,7 @@ package Question2Strategy;
  */
 public class LowerTextFormatter implements TextFormatter {
     @Override
-    public void format(String text) {
-        //do stuff
+    public String format(String text) {
+        return "[LowerTextFormatter]: " + text.toLowerCase();
     }
 }

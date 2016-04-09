@@ -13,6 +13,8 @@ public class TextEditor {
     }
 
     public String publishText(String x){
-        return x;
+        String y = f.format(x);
+        System.out.println(y);
+        return y;
     }
 }

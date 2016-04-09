@@ -1,5 +1,6 @@
 /**
   * Created by annabel in answer to question 1 week 6
+  * Question 2 week 6 included.
   * @author Annabel
   */
 import AtomicTest._
@@ -25,5 +26,11 @@ object MyForecastTest extends App {
       case 0 => "Cloudy"
       case _ => "Unknown"
     }
+  }
+
+  val sunnyData = Vector(100, 80, 50, 20, 0, 15)
+
+  for(i: Int <- sunnyData) {
+    println(forecast(i))
   }
 }

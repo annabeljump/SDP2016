@@ -47,7 +47,7 @@ public class Car {
         return breaks;
     }
 
-    public void setBrakes(String breaks) {
+    public void setBrakes(String brakes) {
         this.breaks = breaks;
     }
 

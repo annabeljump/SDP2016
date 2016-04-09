@@ -1,7 +1,7 @@
 package Question6Builder;
 
 /**
- * Copied from worksheet
+ * Copied from worksheet - DONE
  * @author not Annabel
  */
 public class TestBuilderPattern {

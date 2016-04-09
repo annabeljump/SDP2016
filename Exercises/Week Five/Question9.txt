@@ -1,0 +1,6 @@
+Question:
+When should one make use of the Bridge Design Pattern
+
+Answer:
+The Bridge pattern should be used where both a class and what it is
+supposed to do vary.

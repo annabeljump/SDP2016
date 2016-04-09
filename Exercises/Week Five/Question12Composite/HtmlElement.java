@@ -9,6 +9,7 @@ public class HtmlElement extends HtmlTag {
     private String tag;
     private String start;
     private String end;
+    private String body;
 
     public HtmlElement(String s) {
         this.tag = s;
@@ -29,8 +30,12 @@ public class HtmlElement extends HtmlTag {
         this.end = tag;
     }
 
+    public void setTagBody(String bodyodyody) {
+        this.body = bodyodyody;
+    }
+
     @Override
     public void generateHtml() {
-
+        System.out.println(start + " " + body + " " + end);
     }
 }

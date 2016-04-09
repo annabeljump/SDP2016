@@ -19,11 +19,12 @@ public class Motoren extends Car {
 
     @Override
     public void assemble() {
-        throw new UnsupportedOperationException();
+        System.out.println("Assembling " + p.productName() + " for " + type);
     }
 
     @Override
     public void produceProduct() {
-        throw new UnsupportedOperationException();
+        System.out.println("Modifying " + p.productName() + " according to "
+                + type + "'s specifications");
     }
 }

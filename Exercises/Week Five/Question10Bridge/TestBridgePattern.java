@@ -1,7 +1,7 @@
 package Question10Bridge;
 
 /**
- * Copied from exercise sheet
+ * Copied from exercise sheet - all done
  * @author not Annabel
  */
 public class TestBridgePattern {

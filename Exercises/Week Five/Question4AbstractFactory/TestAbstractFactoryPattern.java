@@ -1,7 +1,7 @@
 package Question4AbstractFactory;
 
 /**
- * Copied from exercise sheet
+ * Copied from exercise sheet - all done!
  * @author not annabel
  */
 public class TestAbstractFactoryPattern {

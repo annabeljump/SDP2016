@@ -1,0 +1,7 @@
+Question:
+When is it appropriate to use the Abstract Factory Design Pattern?
+
+Answer:
+Since the Abstract Factory pattern is a factory that creates other factories, it is
+appropriate to use it where there are potentially many objects to be needed at
+runtime.

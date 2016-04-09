@@ -3,20 +3,24 @@ package Question10Bridge;
 /**
  * Copied from given code
  * @author not Annabel
+ * Modified by
+ * @author Annabel
  */
 public class CentralLocking implements Product {
 
+    private String name;
+
     public CentralLocking(String productName) {
-        throw new UnsupportedOperationException();
+        this.name = productName;
     }
 
     @Override
     public String productName() {
-        throw new UnsupportedOperationException();
+        return name;
     }
 
     @Override
     public void produce() {
-        throw new UnsupportedOperationException();
+        System.out.println("Producing Central Locking System");
     }
 }

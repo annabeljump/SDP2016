@@ -13,6 +13,12 @@ public class CarDirector {
     }
 
     public void build() {
-
+        myCar.buildBodyStyle();
+        myCar.buildBrakes();
+        myCar.buildEngine();
+        myCar.buildFuelType();
+        myCar.buildPower();
+        myCar.buildSeats();
+        myCar.buildWindows();
     }
 }

@@ -7,12 +7,15 @@ package Question4AbstractFactory;
 public class ParserFactoryProducer {
 
     public static AbstractParserFactory getFactory(String str){
-        if (str.equals("NYCFactory")){
-            return new NYCXMLFactory();
-        } else if (str.equals("LondonFactory")) {
-            return new LondonXMLFactory();
-        } else
-            System.out.println("Invalid Request");
+        switch (str) {
+            case "NYCFactory":
+                return new NYCXMLFactory();
+            case "LondonFactory":
+                return new LondonXMLFactory();
+            default:
+                System.out.println("Invalid Request");
+                break;
+        }
         return null;
     }
 }

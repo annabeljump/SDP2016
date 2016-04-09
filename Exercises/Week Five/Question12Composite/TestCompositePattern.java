@@ -1,7 +1,7 @@
 package Question12Composite;
 
 /**
- * Copied from the given code
+ * Copied from the given code - Done!
  * @author not Annabel
  */
 public class TestCompositePattern {

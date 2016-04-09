@@ -18,7 +18,7 @@ public class HtmlParentElement extends HtmlTag {
         this.tag = s;
         this.end = "";
         this.start = "";
-        this.babies = new ArrayList<HtmlTag>();
+        this.babies = new ArrayList<>();
     }
 
     @Override

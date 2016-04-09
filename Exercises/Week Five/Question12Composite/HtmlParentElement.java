@@ -7,6 +7,8 @@ package Question12Composite;
 public class HtmlParentElement extends HtmlTag {
 
     private String tag;
+    private String start;
+    private String end;
 
     public HtmlParentElement(String s) {
         this.tag = s;
@@ -14,17 +16,17 @@ public class HtmlParentElement extends HtmlTag {
 
     @Override
     public String getTagName() {
-        return null;
+        return tag;
     }
 
     @Override
     public void setStartTag(String tag) {
-
+        this.start = tag;
     }
 
     @Override
     public void setEndTag(String tag) {
-
+        this.end = tag;
     }
 
     @Override

@@ -1,7 +1,7 @@
 package Question8Facade;
 
 /**
- * Copied from given code
+ * Copied from given code - done?
  * @author not Annabel
  */
 public class TestFacade {

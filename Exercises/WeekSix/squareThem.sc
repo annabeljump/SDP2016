@@ -1,8 +1,9 @@
 import AtomicTest._
 
 def squareThem(num : Int*): Int = {
-  var squares = List[Int]
+  var squares = 0
   for(i <- num){
-    squares = i*i :: squares
+    squares = i*i + squares
   }
+  squares
 }

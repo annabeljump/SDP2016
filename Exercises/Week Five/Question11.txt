@@ -1,0 +1,18 @@
+Questions:
+(a) What is the Composite Pattern?
+(b) Under what conditions would you use a Composite Design Pattern?
+(c) What are the four participants of the Composite Design Pattern?
+
+Answers:
+(a) The Composite pattern is a pattern which defines a group of objects which are
+to be treated as if it were only one instance of the object - it arranges the
+objects into a hierarchical tree object.
+
+(b) It should be used when clients ignore the difference between composites of
+objects and single objects.
+
+(c) The four participants are:
+    the Client
+    the Component
+    the Composite
+    the "Leaf"

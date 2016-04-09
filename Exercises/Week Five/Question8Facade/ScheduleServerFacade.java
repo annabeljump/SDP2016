@@ -6,15 +6,29 @@ package Question8Facade;
  */
 public class ScheduleServerFacade {
 
+    private ScheduleServer schedServ;
+
     public ScheduleServerFacade(ScheduleServer scheduleServer) {
-        throw new UnsupportedOperationException();
+        this.schedServ = scheduleServer;
     }
 
     public void startServer() {
-        throw new UnsupportedOperationException();
+        schedServ.startBooting();
+        schedServ.readSystemConfigFile();
+        schedServ.init();
+        schedServ.initializeContext();
+        schedServ.initializeListeners();
+        schedServ.createSystemObjects();
+        System.out.println("Start working......");
+        System.out.println("After work done.........");
     }
 
     public void stopServer() {
-        throw new UnsupportedOperationException();
+        schedServ.releaseProcesses();
+        schedServ.destory();
+        schedServ.destroySystemObjects();
+        schedServ.destoryListeners();
+        schedServ.destoryContext();
+        schedServ.shutdown();
     }
 }

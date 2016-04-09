@@ -7,6 +7,7 @@ package Question4AbstractFactory;
 public class NYCOrderXMLParser implements XMLParser {
     @Override
     public String parse() {
-        return null;
+        System.out.println("NYC Parsing Order XML...");
+        return "NYC Order XML Parser";
     }
 }

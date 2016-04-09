@@ -7,6 +7,7 @@ package Question4AbstractFactory;
 public class NYCErrorXMLParser implements XMLParser {
     @Override
     public String parse() {
-        return null;
+        System.out.println("NYC Parsing Error XML...");
+        return "NYC Error XML Parser";
     }
 }

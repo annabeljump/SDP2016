@@ -8,7 +8,7 @@ object TestArgs extends App {
 
   class Family(val member: String*) {
     def familySize(): Int = {
-
+      return member.size
     }
   }
 

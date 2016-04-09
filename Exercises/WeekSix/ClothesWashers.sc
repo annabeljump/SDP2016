@@ -12,3 +12,7 @@ class ClothesWasher(modelName: String, capacity: Double){
       this("Knockoff", capacity)
     }
 }
+
+class ClothesWasher2(modelName: String = "Knockoff",
+                     capacity: Double = 5)
+

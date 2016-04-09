@@ -10,7 +10,7 @@ public class TestAbstractFactoryPattern {
         XMLParser parser = parserFactory.getParserInstance("NYCORDER");
         String msg = "";
         msg = parser.parse();
-        Page 2System.out.println(msg);
+        System.out.println(msg);
         System.out.println("************************************");
         parserFactory = ParserFactoryProducer.getFactory("LondonFactory");
         parser = parserFactory.getParserInstance("LondonFEEDBACK");

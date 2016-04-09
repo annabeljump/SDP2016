@@ -13,6 +13,9 @@ public class HtmlElement extends HtmlTag {
 
     public HtmlElement(String s) {
         this.tag = s;
+        this.start = "";
+        this.end = "";
+        this.body = "";
     }
 
     @Override
@@ -30,6 +33,7 @@ public class HtmlElement extends HtmlTag {
         this.end = tag;
     }
 
+    @Override
     public void setTagBody(String bodyodyody) {
         this.body = bodyodyody;
     }

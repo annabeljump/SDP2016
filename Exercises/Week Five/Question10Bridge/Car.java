@@ -3,11 +3,17 @@ package Question10Bridge;
 /**
  * Copied from given code
  * @author not Annabel
+ * Modified by
+ * @author Annabel
  */
 public abstract class Car {
 
+    private Product p;
+    private String type;
+
     public Car(Product product, String carType) {
-        throw new UnsupportedOperationException();
+        this.p = product;
+        this.type = carType;
     }
 
     public abstract void assemble();

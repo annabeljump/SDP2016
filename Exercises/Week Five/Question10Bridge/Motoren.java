@@ -3,12 +3,18 @@ package Question10Bridge;
 /**
  * Copied from given code
  * @author not Annabel
+ * Modified by
+ * @author Annabel
  */
 public class Motoren extends Car {
 
+    private Product p;
+    private String type;
+
     public Motoren(Product product, String carType) {
         super(product,carType);
-        throw new UnsupportedOperationException();
+        this.p = product;
+        this.type = carType;
     }
 
     @Override

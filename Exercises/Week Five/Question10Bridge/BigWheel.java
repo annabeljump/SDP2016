@@ -5,9 +5,14 @@ package Question10Bridge;
  * @author not Annabel
  */
 public class BigWheel extends Car {
+
+    private Product p;
+    private String type;
+
     public BigWheel(Product product, String carType) {
         super(product, carType);
-        throw new UnsupportedOperationException();
+        this.p = product;
+        this.type = carType;
     }
 
     @Override

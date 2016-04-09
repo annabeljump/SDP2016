@@ -43,11 +43,11 @@ public class Car {
         this.engine = engine;
     }
 
-    public String getBreaks() {
+    public String getBrakes() {
         return breaks;
     }
 
-    public void setBreaks(String breaks) {
+    public void setBrakes(String breaks) {
         this.breaks = breaks;
     }
 
@@ -85,7 +85,7 @@ public class Car {
         sb.append(power);
         sb.append("\n Engine: ");
         sb.append(engine);
-        sb.append("\n Breaks: ");
+        sb.append("\n Brakes: ");
         sb.append(breaks);
         sb.append("\n Seats: ");
         sb.append(seats);

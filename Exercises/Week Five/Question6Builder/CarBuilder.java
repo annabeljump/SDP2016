@@ -6,5 +6,20 @@ package Question6Builder;
  */
 public interface CarBuilder {
 
-    public Car getCar();
+    Car getCar();
+
+    void buildBodyStyle();
+
+    void buildPower();
+
+    void buildEngine();
+
+    void buildBrakes();
+
+    void buildSeats();
+
+    void buildWindows();
+
+    void buildFuelType();
+
 }

@@ -9,4 +9,39 @@ public class SedanCarBuilder implements CarBuilder {
     public Car getCar() {
         return null;
     }
+
+    @Override
+    public void buildBodyStyle() {
+
+    }
+
+    @Override
+    public void buildPower() {
+
+    }
+
+    @Override
+    public void buildEngine() {
+
+    }
+
+    @Override
+    public void buildBrakes() {
+
+    }
+
+    @Override
+    public void buildSeats() {
+
+    }
+
+    @Override
+    public void buildWindows() {
+
+    }
+
+    @Override
+    public void buildFuelType() {
+
+    }
 }

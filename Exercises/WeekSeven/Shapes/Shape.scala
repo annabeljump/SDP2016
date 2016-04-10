@@ -6,10 +6,10 @@ package Shapes
   */
 trait Shape {
 
-  abstract def sides()
+  def sides()
 
-  abstract def perimeter()
+  def perimeter()
 
-  abstract def area()
+  def area()
 
 }

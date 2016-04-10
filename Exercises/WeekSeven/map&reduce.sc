@@ -26,3 +26,16 @@ v2.reduce((sum, n) => sum + n) is 1111
 var sum = 0
 for(n <- v2) {sum = sum + n}
 sum is 1111
+
+
+//Q4 sumIt method
+def sumIt(i: Int*): Int = {
+  val vec = Vector(0)
+  for (n <- i) vec :+ i
+  val s = vec.reduce((sum, n) => sum + n)
+  s
+}
+
+//Q4 tests
+sumIt(1, 2, 3) is 6
+sumIt(45, 45, 45, 60) is 195

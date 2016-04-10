@@ -3,7 +3,7 @@ package Shapes
 /**
   * Created for week 7 Q5
   */
-class Square(edge: Int = 4) extends Shape {
+class Square(edge: Int = 4) extends Rectangular {
 
   val numberSides = 4
 

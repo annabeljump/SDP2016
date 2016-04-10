@@ -1,5 +1,6 @@
 /**
   * Created for week 7 question 6
+  * And for question 10
   * @author Annabel
   */
 object divide extends App {
@@ -28,3 +29,11 @@ sealed trait DivisionResult
 case class Finite(result: Int) extends DivisionResult
 
 case class Infinite() extends DivisionResult
+
+//Question 10 trait and classes:
+
+sealed trait Maybe[A]
+
+case class Full[A](a: A) extends Maybe[A]
+
+case class Empty[A]() extends Maybe[A]

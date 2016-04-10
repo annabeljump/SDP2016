@@ -19,6 +19,18 @@ public class BnzInstruction extends Instruction {
 
     }
 
+    public String getLabel() {
+        return this.label;
+    }
+
+    public Integer getRegister() {
+        return this.register;
+    }
+
+    public String getValue() {
+        return this.nextInst;
+    }
+
     @Override
     public void execute(Machine m) {
         if (m.getRegisters().getRegister(register) != 0){

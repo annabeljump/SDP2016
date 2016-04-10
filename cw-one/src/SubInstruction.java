@@ -22,6 +22,18 @@ public class SubInstruction extends Instruction {
         this.op2 = op2;
     }
 
+    public String getLabel() {
+        return this.label;
+    }
+
+    public Integer getOp1() {
+        return this.op1;
+    }
+
+    public Integer getOp2() {
+        return this.op2;
+    }
+
     @Override
     public void execute(Machine m) {
         int value1 = m.getRegisters().getRegister(op1);

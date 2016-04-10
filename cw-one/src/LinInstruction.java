@@ -21,6 +21,18 @@ public class LinInstruction extends Instruction {
 
     }
 
+    public String getLabel() {
+        return this.label;
+    }
+
+    public Integer getRegister() {
+        return this.register;
+    }
+
+    public Integer getValue() {
+        return this.value;
+    }
+
     @Override
     public void execute(Machine m) {
         m.getRegisters().setRegister(register, value);

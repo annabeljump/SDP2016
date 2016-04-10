@@ -1,11 +1,9 @@
 package src.test;
 
-import src.*;
-
-import org.junit.Test;
 import org.junit.Before;
-import org.junit.After;
-import org.junit.Assert.*;
+import org.junit.Test;
+
+import src.AddInstruction;
 
 /**
  * Tests for AddInstruction.
@@ -16,7 +14,14 @@ public class testAddInstruction {
     @Before
     public void setup() {
         AddInstruction testee = new AddInstruction("L1", 0, 3, 4);
-
     }
-//TODO all of this - how to set up registers & check entries are correct, etc.
+
+    @Test
+    public void testFields() {
+        AddInstruction testee = new AddInstruction("L1", 0, 3, 4);
+        assert(testee.getOp1() == 3);
+        assert(testee.getOp2() == 4);
+        assert(testee.getLabel().equals("L1"));
+    }
+
 }

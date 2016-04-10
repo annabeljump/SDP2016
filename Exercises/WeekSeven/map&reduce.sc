@@ -10,7 +10,6 @@ v.map(n => (n*11) + 10) is Vector(21, 32, 43, 54)
 v.foreach{n: Int => (n*11) + 10} is Vector(21, 32, 43, 54)
 //Blank! Test fail!
 //Q1 (c) - for loop
-//attempting to change immutable collection
-for(n <- v) { n*11 + 10 }
-v is Vector(21, 32, 43, 54)
-//Values unchanged!!
+//trying yield keyword
+for(n <- v) yield n*11 + 10 is Vector(21, 32, 43, 54)
+//only 21....

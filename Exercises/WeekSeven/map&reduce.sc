@@ -11,5 +11,6 @@ v.foreach{n: Int => (n*11) + 10} is Vector(21, 32, 43, 54)
 //Blank! Test fail!
 //Q1 (c) - for loop
 //trying yield keyword
-for(n <- v) yield n*11 + 10 is Vector(21, 32, 43, 54)
-//only 21....
+(for(n <- v) yield n*11 + 10) is Vector(21, 32, 43, 54)
+//maybe if I put the whole thing in brackets...
+//SUCCESS!!

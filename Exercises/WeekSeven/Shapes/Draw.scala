@@ -5,7 +5,7 @@ import Shapes._
   *
   * @author Annabel
   */
-object Draw {
+object Draw extends App {
 
   def apply(sh: Shape) = sh match {
       //fixed!

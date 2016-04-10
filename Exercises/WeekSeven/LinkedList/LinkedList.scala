@@ -18,7 +18,10 @@ final case class Pair[A](h: A, t: LinkedList[A]) extends LinkedList[A] {
 
   override def apply(n: Int) = ???
 
-  override def contains(a: A): Boolean = ???
+  override def contains(a: A): Boolean = {
+    if (a == this.head) true
+    else this.tail.contains(a)
+  }
 }
 
 final case class Empty[A]() extends LinkedList[A] {

@@ -4,7 +4,7 @@ package Shapes
   * Created for week 7 Q5
   * @author Annabel
   */
-class Rectangle(long: Int = 4, short: Int = 2) extends Rectangular {
+class Rectangle(width: Int = 4, height: Int = 2) extends Rectangular {
 
   val numberSides = 4
 
@@ -13,10 +13,10 @@ class Rectangle(long: Int = 4, short: Int = 2) extends Rectangular {
   }
 
   override def perimeter(): Double = {
-    (long * 2) + (short * 2)
+    (width * 2) + (height * 2)
   }
 
   override def area(): Double = {
-    long * short
+    width * height
   }
 }

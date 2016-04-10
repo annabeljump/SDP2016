@@ -11,6 +11,16 @@ object divide extends App {
 
   println(divide(1,2))
   println(divide(1,0))
+
+  def divideBy(x: Int, y: Int) = {
+    divide(x, y) match {
+      case Finite(i) => x + " divided by " + y + " is " + i
+      case Infinite() => "Dividing by 0 is infinite!"
+    }
+  }
+
+  println(divideBy(2,1))
+  println(divideBy(1,0))
 }
 
 sealed trait DivisionResult

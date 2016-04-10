@@ -4,19 +4,25 @@ package Shapes
   * Created for week 7 Q5
   * @author Annabel
   */
-case class Rectangle(width: Int = 4, height: Int = 2) extends Rectangular {
+case class Rectangle(width: Int, height: Int) extends Rectangular {
 
+  val w = width
+  val h = height
   val numberSides = 4
+  var p = 0.0
+  var a = 0.0
 
   override def sides(): Int = {
     numberSides
   }
 
   override def perimeter(): Double = {
-    (width * 2) + (height * 2)
+    p = (w * 2) + (h * 2)
+    p
   }
 
   override def area(): Double = {
-    width * height
+    a = w * h
+    a
   }
 }

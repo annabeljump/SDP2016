@@ -4,19 +4,24 @@ package Shapes
   * Created for week 7 Q5
   * @author Annabel
   */
-case class Circle(radius: Int = 1) extends Shape {
+case class Circle(radius: Int) extends Shape {
 
+  val r = radius
   val numberSides = 1
+  var p = 0.0
+  var a = 0.0
 
   override def sides(): Int ={
     numberSides
   }
 
   override def perimeter(): Double = {
-    2 * math.Pi * radius
+    p = 2 * math.Pi * r
+    p
   }
 
   override def area(): Double = {
-    math.Pi * (radius * radius)
+    a = math.Pi * (r * r)
+    a
   }
 }

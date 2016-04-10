@@ -12,11 +12,11 @@ class Rectangle(long: Int = 4, short: Int = 2) extends Shape {
     numberSides
   }
 
-  override def perimeter(): Int = {
+  override def perimeter(): Double = {
     (long * 2) + (short * 2)
   }
 
-  override def area(): Int = {
+  override def area(): Double = {
     long * short
   }
 }

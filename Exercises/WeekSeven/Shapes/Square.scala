@@ -11,11 +11,11 @@ class Square(edge: Int = 4) extends Shape {
     numberSides
   }
 
-  override def perimeter(): Int = {
+  override def perimeter(): Double = {
     edge * numberSides
   }
 
-  override def area(): Int = {
+  override def area(): Double = {
     edge * edge
   }
 }

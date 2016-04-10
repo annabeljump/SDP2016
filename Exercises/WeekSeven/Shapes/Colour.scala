@@ -2,7 +2,7 @@
   * Created for week 7 Q5
   * @author Annabel
   */
-sealed trait Colour {
+trait Colour {
 
   val red: Int
   val green: Int

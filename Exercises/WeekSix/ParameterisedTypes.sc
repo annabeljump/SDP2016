@@ -16,7 +16,7 @@ explicit('a', 'b', 'c') is "Vector(a, b, c)"
 
 //Q17 Double:
 def explicitDouble(d1: Double, d2: Double,
-                   d3: Double) ={
+                   d3: Double): Vector[Double] ={
   Vector(d1, d2, d3)
 }
 

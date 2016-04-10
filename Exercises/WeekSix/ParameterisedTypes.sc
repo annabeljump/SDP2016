@@ -35,3 +35,14 @@ def explicitSet(v: Vector[Double]): Set[Double] = {
 }
 explicitSet(Vector(10.0, 20.0, 10.0)) is Set(10.0, 20.0)
 explicitSet(Vector(1, 2, 3, 2, 3, 4)) is Set(1.0, 2.0, 3.0, 4.0)
+
+//Q20???? Is that right??
+def explicitString(v: Vector[Int]): String = {
+  var str = ""
+  for(i <- v) {
+    str = str + i.toString() + ","
+  }
+  str
+}
+
+explicitString(Vector(1,2,3,4)) is "1,2,3,4,"

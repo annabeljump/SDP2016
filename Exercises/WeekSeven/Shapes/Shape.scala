@@ -1,12 +1,13 @@
 package Shapes
 
+
 /**
   * Created for Q5, week 7
   * @author Annabel
   */
 trait Shape {
 
-  def colour(): Colour
+  val colour: Colour
 
   def sides(): Int
 

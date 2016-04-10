@@ -4,4 +4,4 @@ package Publisher
   * Created for week 7 question 7
   * @author Annabel
   */
-class Book(author: Author) extends Publication
+class Editor(name: String)

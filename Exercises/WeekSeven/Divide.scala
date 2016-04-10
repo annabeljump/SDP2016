@@ -1,12 +1,16 @@
 /**
   * Created for week 7 question 6
+  * @author Annabel
   */
-object Divide {
+object divide extends App {
 
   def apply(x: Int, y: Int): DivisionResult = {
-    if(x == 0 || y == 0) new Infinite()
+    if(y == 0) new Infinite()
     else Finite(x/y)
   }
+
+  println(divide(1,2))
+  println(divide(1,0))
 }
 
 sealed trait DivisionResult

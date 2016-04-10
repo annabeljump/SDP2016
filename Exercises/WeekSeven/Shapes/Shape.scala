@@ -4,7 +4,7 @@ package Shapes
   * Created for Q5, week 7
   * @author Annabel
   */
-trait Shape {
+sealed trait Shape {
 
   def sides()
 

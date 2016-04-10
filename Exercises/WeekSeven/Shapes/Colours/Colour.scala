@@ -13,6 +13,8 @@ trait Colour {
 
   def bright(): String
 
+  def getName: String
+
 }
 
 object Colour {
@@ -23,6 +25,10 @@ object Colour {
       override val green = g
       override val blue = b
       override val name = n
+
+      override def getName: String = {
+        bright()
+      }
 
       override def bright(): String = {
         if ( red < 50 && green < 50 && blue < 50) "light"

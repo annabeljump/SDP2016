@@ -12,6 +12,10 @@ case class Yellow() extends Colour {
   override val blue = 0
   override val name = "Yellow"
 
+  override def getName: String = {
+    name
+  }
+
   override def bright(): String = {
     if ( red < 50 && green < 50 && blue < 50) "light"
     else "dark"

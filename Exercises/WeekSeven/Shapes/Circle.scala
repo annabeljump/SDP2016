@@ -4,7 +4,7 @@ package Shapes
   * Created for week 7 Q5
   * @author Annabel
   */
-class Circle(radius: Int = 1) extends Shape {
+case class Circle(radius: Int = 1) extends Shape {
 
   val numberSides = 1
 

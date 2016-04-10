@@ -4,7 +4,7 @@ package Shapes
   * Created for week 7 Q5
   * @author Annabel
   */
-class Rectangle(width: Int = 4, height: Int = 2) extends Rectangular {
+case class Rectangle(width: Int = 4, height: Int = 2) extends Rectangular {
 
   val numberSides = 4
 

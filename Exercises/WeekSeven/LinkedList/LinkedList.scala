@@ -37,3 +37,13 @@ final case class Empty[A]() extends LinkedList[A] {
 
   override def contains(a: A): Boolean = false
 }
+
+object TestList extends App{
+  val list: LinkedList[Int] = Pair(1, Pair(2, Pair(3, Empty())))
+
+  println(list.isInstanceOf[LinkedList[Int]])
+  println(list.length())
+  println(list.contains(1))
+  println(list.apply(2))
+
+}

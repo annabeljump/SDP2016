@@ -29,3 +29,9 @@ def explicitList(v: Vector[Double]): List[Double] ={
 explicitList(Vector(10.0, 20.0)) is List(10.0, 20.0)
 explicitList(Vector(1, 2, 3)) is List(1.0, 2.0, 3.0)
 
+//Q19 take Vector, return Set
+def explicitSet(v: Vector[Double]): Set[Double] = {
+  v.toSet
+}
+explicitSet(Vector(10.0, 20.0, 10.0)) is Set(10.0, 20.0)
+explicitSet(Vector(1, 2, 3, 2, 3, 4)) is Set(1.0, 2.0, 3.0, 4.0)

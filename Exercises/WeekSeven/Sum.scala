@@ -16,7 +16,7 @@ object TestSum extends App {
   val sum: Sum[Int, String] = Right("foo")
 
   println(sum match {
-    case Left(x) => x.toString()
+    case Left(x) => x.toString
     case Right(x)  => x
   })
 

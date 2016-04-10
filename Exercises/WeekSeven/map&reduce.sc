@@ -17,3 +17,12 @@ v.foreach{n: Int => (n*11) + 10} is Vector(21, 32, 43, 54)
 
 //Q2 - modifying given code
 (for(n <- v) yield n +1) is Vector(2, 3, 4, 5)
+
+//Q3 - given code (changed vector name)
+val v2 = Vector(1, 10, 100, 1000)
+v2.reduce((sum, n) => sum + n) is 1111
+//Attempting for loop
+//think I have to create a new variable to evaluate
+var sum = 0
+for(n <- v2) {sum = sum + n}
+sum is 1111

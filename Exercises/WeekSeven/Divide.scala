@@ -22,6 +22,7 @@ object divide extends App {
 
   println(divideBy(2,1))
   println(divideBy(1,0))
+
 }
 
 sealed trait DivisionResult
@@ -37,3 +38,23 @@ sealed trait Maybe[A]
 case class Full[A](a: A) extends Maybe[A]
 
 case class Empty[A]() extends Maybe[A]
+
+object genericDivide extends App {
+
+  def apply(x: Int, y: Int): Maybe[Int] = {
+    if(y == 0) new Empty[Int]()
+    else Full[Int](x/y)
+  }
+
+  genericDivide(1,0) match {
+    case Full(value) => println(s"It's finite: ${value}")
+    case Empty() => println(s"It's infinite!")
+  }
+
+  genericDivide(24,2) match {
+    case Full(value) => println(s"It's finite: ${value}")
+    case Empty() => println(s"It's infinite!")
+  }
+
+
+}

@@ -31,7 +31,7 @@ sum is 1111
 //Q4 sumIt method
 def sumIt(i: Int*): Int = {
   val vec = Vector(0)
-  for (n <- i) vec :+ i
+  for (x <- i) { vec :+ x}
   val s = vec.reduce((sum, n) => sum + n)
   s
 }
@@ -39,3 +39,6 @@ def sumIt(i: Int*): Int = {
 //Q4 tests
 sumIt(1, 2, 3) is 6
 sumIt(45, 45, 45, 60) is 195
+
+val vector = Vector(1, 2)
+vector :+ 3

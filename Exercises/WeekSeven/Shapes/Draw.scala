@@ -20,5 +20,7 @@ object Draw extends App {
   println(Draw(Rectangle(2,3,Yellow())))
   println(Draw(Square(4,Pink())))
 
+  //this will print name of custom colour not light or dark
+  println(Draw(Circle(4, Colour.customColour("Green", 0, 100, 0))))
 
 }

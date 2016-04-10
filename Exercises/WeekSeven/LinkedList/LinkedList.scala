@@ -31,7 +31,7 @@ final case class Pair[A](h: A, t: LinkedList[A]) extends LinkedList[A] {
 }
 
 final case class Empty[A]() extends LinkedList[A] {
-  override def length(): Int = null
+  override def length(): Int = 0
 
   override def apply(n: Int) = throw new Exception("Can't retrieve value from empty list!")
 

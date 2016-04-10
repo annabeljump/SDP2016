@@ -9,12 +9,10 @@ object Draw extends App {
 
   def apply(sh: Shape) = sh match {
       //fixed!
-      case Circle(radius) => "A circle of radius " + radius + "cm"
-      case Rectangle(width, height) => "A rectangle of width " + width + "cm and height " + height + "cm"
-      case Square(edge) => "A square with sides of " + edge + "cm"
+      case Circle(radius, colour) => "A circle of radius " + radius + "cm"
+      case Rectangle(width, height, colour) => "A rectangle of width " + width + "cm and height " + height + "cm"
+      case Square(edge, colour) => "A square with sides of " + edge + "cm"
     }
 
-  println(Draw(Circle(10)))
-  println(Draw(Square(4)))
-  println(Draw(Rectangle(3,6)))
+
 }

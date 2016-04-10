@@ -1,5 +1,6 @@
 package Shapes
 
+import Colours._
 
 /**
   * Created for Q5, week 7

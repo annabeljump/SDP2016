@@ -1,3 +1,5 @@
+package Colours
+
 /**
   * Created for week 7 Q5
   * @author Annabel

@@ -1,5 +1,8 @@
+package Colours
+
 /**
   * Created for week 7 question 5
+  *
   * @author
   */
 case class Red() extends Colour {

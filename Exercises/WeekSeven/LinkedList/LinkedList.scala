@@ -14,7 +14,10 @@ final case class Pair[A](h: A, t: LinkedList[A]) extends LinkedList[A] {
   val head: A = h
   val tail: LinkedList[A] = t
 
-  override def length(): Int = ???
+  override def length(): Int = {
+    if(this.tail == Empty()) 1
+    else this.tail.length() + 1
+  }
 
   override def apply(n: Int): A = {
     if(n == 0) this.head

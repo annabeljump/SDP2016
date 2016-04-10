@@ -7,6 +7,8 @@ package Publisher
 class Periodical extends Publication{
 
   val editor: String = ""
+  val issue = Issue(0, 0)
+  val articles = Seq[Manuscript]
 
 }
 

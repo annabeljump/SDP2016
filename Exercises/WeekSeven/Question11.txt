@@ -1,0 +1,13 @@
+Question:
+Sum types and product types are general concepts that allow us to model almost any
+kind of data structure. We have seen two methods of writing these types, traits and
+generics — when should we consider using each?
+
+Answer:
+Traits enable unlimited implementations, and provide more structure for the child classes,
+but it is difficult to have too much flexibility with data types, unless writing an entirely
+new child class.
+
+Generics allow interchangeability between data types specifically, and would be useful if
+the type of an object is not known until runtime, and saves writing multiple classes implementing
+the same trait/interface but with different data types.

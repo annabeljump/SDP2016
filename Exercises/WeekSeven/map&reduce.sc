@@ -1,6 +1,6 @@
 import AtomicTest._
 
-//Q1 - given code
+//Q1 & Q2 - given code
 val v = Vector(1, 2, 3, 4)
 v.map(n => n + 1) is Vector(2, 3, 4, 5)
 
@@ -14,3 +14,6 @@ v.foreach{n: Int => (n*11) + 10} is Vector(21, 32, 43, 54)
 (for(n <- v) yield n*11 + 10) is Vector(21, 32, 43, 54)
 //maybe if I put the whole thing in brackets...
 //SUCCESS!!
+
+//Q2 - modifying given code
+(for(n <- v) yield n +1) is Vector(2, 3, 4, 5)

@@ -6,6 +6,8 @@ package Shapes
   */
 trait Shape {
 
+  def colour(): Colour
+
   def sides(): Int
 
   def perimeter(): Double

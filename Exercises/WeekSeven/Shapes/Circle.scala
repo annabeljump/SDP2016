@@ -4,8 +4,9 @@ package Shapes
   * Created for week 7 Q5
   * @author Annabel
   */
-case class Circle(radius: Int) extends Shape {
+case class Circle(radius: Int, colour: Colour) extends Shape {
 
+  val c = colour
   val r = radius
   val numberSides = 1
   var p = 0.0

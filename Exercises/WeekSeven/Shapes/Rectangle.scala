@@ -4,8 +4,9 @@ package Shapes
   * Created for week 7 Q5
   * @author Annabel
   */
-case class Rectangle(width: Int, height: Int) extends Rectangular {
+case class Rectangle(width: Int, height: Int, colour: Colour) extends Rectangular {
 
+  val c = colour
   val w = width
   val h = height
   val numberSides = 4

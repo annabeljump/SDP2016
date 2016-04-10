@@ -3,8 +3,9 @@ package Shapes
 /**
   * Created for week 7 Q5
   */
-case class Square(edge: Int) extends Rectangular {
+case class Square(edge: Int, colour: Colour) extends Rectangular {
 
+  val c = colour
   val numberSides = 4
   val w = edge
   val h = edge

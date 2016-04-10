@@ -14,9 +14,9 @@ trait Colour {
 
 object Colour {
 
-  val red: Int = _
-  val green: Int = _
-  val blue: Int = _
+  val red: Int = 0
+  val green: Int = 0
+  val blue: Int = 0
 
   def customColour(r: Int, g: Int, b: Int): Colour = {
     new Colour {
